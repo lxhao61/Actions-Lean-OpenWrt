@@ -30,6 +30,10 @@ rm -rf package/feeds/packages/v2ray-geodata
 rm -rf feeds/packages/net/xray-core
 rm -rf package/feeds/packages/xray-core
 
+# 删除自带 msd_lite
+rm -rf feeds/packages/net/msd_lite
+rm -rf package/feeds/packages/msd_lite
+
 # 拉取 passwall-packages
 git clone https://github.com/xiaorouji/openwrt-passwall-packages.git package/passwall/packages
 #cd package/passwall/packages
