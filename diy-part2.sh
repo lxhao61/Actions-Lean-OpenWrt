@@ -17,14 +17,23 @@ sed -i 's/192.168.1.1/192.168.6.1/g' package/base-files/files/bin/config_generat
 # 取消登陆密码
 sed -i 's/^\(.*99999\)/#&/' package/lean/default-settings/files/zzz-default-settings
 
+# 删除自带 golang
+rm -rf feeds/packages/lang/golang
+# 拉取 golang
+git clone https://github.com/sbwml/packages_lang_golang.git -b 23.x feeds/packages/lang/golang
+
 # 删除自带 v2ray-geodata
 rm -rf feeds/packages/net/v2ray-geodata
 rm -rf package/feeds/packages/v2ray-geodata
 
+# 删除自带 xray-core
+rm -rf feeds/packages/net/xray-core
+rm -rf package/feeds/packages/xray-core
+
 # 拉取 passwall-packages
 git clone https://github.com/xiaorouji/openwrt-passwall-packages.git package/passwall/packages
 #cd package/passwall/packages
-#git checkout fed70a5113b60c96d9c8182e40770f37c83d67ba
+#git checkout bc40fceb0488dfb5a4adb711cc1830a8021ee555
 #cd -
 
 # 拉取 luci-app-passwall
@@ -36,12 +45,11 @@ git clone https://github.com/xiaorouji/openwrt-passwall.git package/passwall/luc
 # 拉取 ShadowSocksR Plus+
 #git clone https://github.com/fw876/helloworld.git -b master package/helloworld
 
-# 删除自带 msd_lite
-rm -rf feeds/packages/net/msd_lite
-rm -rf package/feeds/packages/msd_lite
 # 拉取 msd_lite、luci-app-msd_lite
-git clone https://github.com/ximiTech/msd_lite.git package/msd_lite/msd_lite
-git clone https://github.com/ximiTech/luci-app-msd_lite.git package/msd_lite/luci-app-msd_lite
+git clone https://github.com/gw826943555/openwrt_msd_lite.git package/msd_lite
+#git clone https://github.com/ywt114/luci-app-msd_lite.git package/msd_lite
+#git clone https://github.com/ximiTech/msd_lite.git package/msd_lite
+#git clone https://github.com/ximiTech/luci-app-msd_lite.git package/luci-app-msd_lite
 
 # 拉取 OpenAppFilter、luci-app-oaf
 git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
@@ -49,7 +57,7 @@ git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
 # 删除 passwall-packages 中 gn
 #rm -rf package/passwall/packages/gn
 # 删除 passwall-packages 中 naiveproxy
-rm -rf package/passwall/packages/naiveproxy
+#rm -rf package/passwall/packages/naiveproxy
 # 删除自带 pgyvpn
 #rm -rf feeds/packages/net/pgyvpn
 # 删除自带 tailscale
@@ -78,7 +86,7 @@ function merge_package(){
 #merge_package openwrt-23.05 https://github.com/immortalwrt/packages.git package/passwall/packages devel/gn
 # 提取 naiveproxy
 #merge_package master https://github.com/immortalwrt/packages.git package/passwall/packages net/naiveproxy
-merge_package v5 https://github.com/sbwml/openwrt_helloworld.git package/passwall/packages naiveproxy
+#merge_package v5 https://github.com/sbwml/openwrt_helloworld.git package/passwall/packages naiveproxy
 # 提取 pgyvpn
 #merge_package packages-pgyvpn https://github.com/hue715/lean-packages.git feeds/packages/net net/pgyvpn
 # 提取 tailscale
