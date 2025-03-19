@@ -20,7 +20,7 @@ sed -i 's/^\(.*99999\)/#&/' package/lean/default-settings/files/zzz-default-sett
 # 删除自带 golang
 rm -rf feeds/packages/lang/golang
 # 拉取 golang
-git clone https://github.com/sbwml/packages_lang_golang.git -b 23.x feeds/packages/lang/golang
+git clone https://github.com/sbwml/packages_lang_golang.git -b 24.x feeds/packages/lang/golang
 
 # 删除自带 v2ray-geodata
 rm -rf feeds/packages/net/v2ray-geodata
