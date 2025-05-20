@@ -23,8 +23,8 @@ rm -rf feeds/packages/lang/golang
 git clone https://github.com/sbwml/packages_lang_golang.git -b 24.x feeds/packages/lang/golang
 
 # 删除自带 v2ray-geodata
-rm -rf feeds/packages/net/v2ray-geodata
-rm -rf package/feeds/packages/v2ray-geodata
+#rm -rf feeds/packages/net/v2ray-geodata
+#rm -rf package/feeds/packages/v2ray-geodata
 
 # 删除自带 xray-core
 rm -rf feeds/packages/net/xray-core
