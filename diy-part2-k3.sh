@@ -30,10 +30,6 @@ git clone https://github.com/sbwml/packages_lang_golang.git -b 24.x feeds/packag
 rm -rf feeds/packages/net/xray-core
 rm -rf package/feeds/packages/xray-core
 
-# 删除自带 msd_lite
-#rm -rf feeds/packages/net/msd_lite
-#rm -rf package/feeds/packages/msd_lite
-
 # 拉取 passwall-packages
 #git clone https://github.com/xiaorouji/openwrt-passwall-packages.git package/passwall/packages
 #cd package/passwall/packages
@@ -48,12 +44,6 @@ rm -rf package/feeds/packages/xray-core
 
 # 拉取 ShadowSocksR Plus+
 git clone https://github.com/fw876/helloworld.git -b master package/helloworld
-
-# 拉取 msd_lite、luci-app-msd_lite
-#git clone https://github.com/gw826943555/openwrt_msd_lite.git package/msd_lite
-#git clone https://github.com/ywt114/luci-app-msd_lite.git package/msd_lite
-#git clone https://github.com/ximiTech/msd_lite.git package/msd_lite
-#git clone https://github.com/ximiTech/luci-app-msd_lite.git package/luci-app-msd_lite
 
 # 拉取 OpenAppFilter、luci-app-oaf
 git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
@@ -95,5 +85,3 @@ function merge_package(){
 #merge_package packages-pgyvpn https://github.com/hue715/lean-packages.git feeds/packages/net net/pgyvpn
 # 提取 tailscale
 merge_package openwrt-23.05 https://github.com/immortalwrt/packages.git feeds/packages/net net/tailscale
-# 提取 luci-app-msd_lite
-merge_package main https://github.com/gw826943555/openwrt_msd_lite.git package/luci-app-msd_lite luci-app-msd_lite
