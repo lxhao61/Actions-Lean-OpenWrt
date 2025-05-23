@@ -30,6 +30,10 @@ git clone https://github.com/sbwml/packages_lang_golang.git -b 24.x feeds/packag
 rm -rf feeds/packages/net/xray-core
 rm -rf package/feeds/packages/xray-core
 
+# 删除自带 v2ray-core
+rm -rf feeds/packages/net/v2ray-core
+rm -rf package/feeds/packages/v2ray-core
+
 # 拉取 passwall-packages
 #git clone https://github.com/xiaorouji/openwrt-passwall-packages.git package/passwall/packages
 #cd package/passwall/packages
