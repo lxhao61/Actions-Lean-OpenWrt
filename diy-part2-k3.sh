@@ -45,7 +45,7 @@ rm -rf package/feeds/packages/v2ray-core
 # 拉取 ShadowSocksR Plus+
 git clone https://github.com/fw876/helloworld.git -b master package/helloworld
 cd package/helloworld
-git checkout f304abc93c37c1415a5545127b2978fe3a826483
+git checkout efeeabb8f4d869fca82ac4b4e5e678fe59a88b1a
 cd -
 
 # 拉取 OpenAppFilter、luci-app-oaf
